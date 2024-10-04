@@ -1,10 +1,15 @@
-
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
 
 @Entity()
-export class IDtorneo{
+export class torneo {
+
     @PrimaryGeneratedColumn()
-    id:number 
+    id: number
+
     @Column()
-    descripcion:string
+    iduser: number
+
+    @Column()
+    idequipo: number
+
 }
