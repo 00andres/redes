@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es6",                              // El objetivo de JavaScript que deseas generar
+    "module": "commonjs",                        // El sistema de módulos a usar
+    "experimentalDecorators": true,              // Habilita el uso de decoradores
+    "emitDecoratorMetadata": true,               // Emite metadatos para decoradores
+    "strict": true,                              // Habilita todas las comprobaciones de tipo estricto
+    "skipLibCheck": true,                        // Omite la verificación de tipos en archivos de declaración
+    "forceConsistentCasingInFileNames": true,   // Asegura que las importaciones tengan un nombre de archivo consistente
+    "outDir": "./dist",                          // Carpeta de salida para los archivos compilados
+    "rootDir": "./src",                          // Carpeta raíz para el código fuente
+    "esModuleInterop": true                       // Habilita compatibilidad con CommonJS
+  },
+  "include": ["src/**/*", "test/**/*.ts"],                        // Archivos a incluir en la compilación
+  "exclude": ["node_modules", "**/*.spec.ts"]   // Archivos a excluir de la compilación
+}

@@ -1,9 +1,8 @@
 import "reflect-metadata"
 import { DataSource } from "typeorm"
-
-import { IDequipo } from "./entity/equipo"
-import { IDtorneo } from "./entity/torneo"
-import { IDpartido } from "./entity/partido"
+import { torneo } from "./entity/torneo"
+import { equipo } from "./entity/equipo"
+import { User } from "./entity/User"
 
 
   
@@ -12,11 +11,11 @@ export const AppDataSource = new DataSource({
     host: "localhost",
     port: 3306,
     username: "root",
-    password: "test",
-    database: "practica",
+    password: "",
+    database: "practica3",
     synchronize: true,
     logging: false,
-    entities: [IDequipo,IDpartido,IDtorneo],
+    entities: [equipo,torneo,User],
     migrations: [],
     subscribers: [],
 })

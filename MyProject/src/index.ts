@@ -6,4 +6,4 @@ AppDataSource.initialize().then(() => {
     app.listen(3000, () => {
         console.log("El servidor está corriendo en http://localhost:3000")
     })
-}).catch(error => console.log("Error al conectar con la base de datos: ", error))
+}).catch(error => console.log("Error al conectar con la base de datos: ", error)) 
