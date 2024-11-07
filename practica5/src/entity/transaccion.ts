@@ -6,17 +6,15 @@ export class Transaccion {
     id!: number;
 
     @Column()
-    idPartido!: number; // ID del partido relacionado
+    idPartido!: number; 
 
     @Column()
-    idUsuario!: number; // ID del usuario que realiza la transacción
-
+    idUsuario!: number; 
     @Column()
-    tipo!: string; // Tipo de transacción (ej: "venta", "compra", etc.)
-
+    tipo!: string; 
     @Column()
-    fecha!: Date; // Fecha de la transacción
+    fecha!: Date; 
 
-    @Column({ nullable: true }) // Opcional, puede ser nulo
-    observacion?: string; // Observaciones adicionales
+    @Column({ nullable: true }) 
+    observacion?: string; 
 }
