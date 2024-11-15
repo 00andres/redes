@@ -1,0 +1,56 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  id: String!
+  name: String!
+  edad: Int!
+}
+
+type Equipo {
+  id: Int!
+  name: String!
+  descripcion: String!
+}
+
+type Torneo {
+  id: Int!
+  name: String!
+  fechaInicio: DateTime!
+  fechaFin: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  sayHello: String!
+  users: [User!]!
+  torneos: [Torneo!]!
+  equipos: [Equipo!]!
+}
+
+type Mutation {
+  createUser(input: CreateUserDto!): User!
+  createTorneo(input: CreateTorneoDto!): Torneo!
+  createEquipo(input: CreateEquipoDto!): Equipo!
+}
+
+input CreateUserDto {
+  name: String!
+  edad: Int!
+}
+
+input CreateTorneoDto {
+  name: String!
+  fechaInicio: DateTime!
+  fechaFin: DateTime!
+}
+
+input CreateEquipoDto {
+  name: String!
+  descripcion: String!
+}
