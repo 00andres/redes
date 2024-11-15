@@ -5,7 +5,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { User } from './entity/user.entity';
 import { Equipo } from './entity/equipo.entity';
-import { Torneo } from './entity/torneo.entity';  // Ya está importado correctamente
+import { Torneo } from './entity/torneo.entity';  
 import { AppResolver } from './app.resolver';
 import { UserResolver } from './resolvers/user.resolver';  
 import { TorneoResolver } from './resolvers/torneo.resolver';
@@ -16,13 +16,13 @@ import { TorneoService } from './services/torneo.service';
 
 @Module({
   imports: [
-    // Configuración global del módulo de configuración
+    
     ConfigModule.forRoot({
       isGlobal: true, 
-      envFilePath: '.env', // Especifica la ubicación del archivo .env
+      envFilePath: '.env', 
     }),
 
-    // Configuración del TypeOrmModule para la base de datos
+    
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
@@ -39,16 +39,16 @@ import { TorneoService } from './services/torneo.service';
           username: dbUsername,
           password: configService.get<string>('DB_PASSWORD'),
           database: configService.get<string>('DB_DATABASE'),
-          entities: [User, Equipo, Torneo], // Asegúrate de incluir Torneo aquí
+          entities: [User, Equipo, Torneo], 
           synchronize: true,
         };
       },
     }),
 
-    // Importa TypeOrmModule.forFeature para habilitar los repositorios de User, Equipo y Torneo
+    
     TypeOrmModule.forFeature([User, Equipo, Torneo]),
 
-    // Configuración del GraphQLModule con ApolloDriver
+   
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver, 
       autoSchemaFile: 'schema.gql', 
@@ -61,7 +61,7 @@ import { TorneoService } from './services/torneo.service';
     UserResolver,
     UserService,
     TorneoResolver,
-    TorneoService,    // El servicio TorneoService está aquí
+    TorneoService,    
     EquipoResolver,
     EquipoService,
   ],

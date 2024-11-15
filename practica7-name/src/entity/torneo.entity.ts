@@ -1,8 +1,7 @@
 import { ObjectType, Field, Int } from '@nestjs/graphql';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@ObjectType() // Asegúrate de que la clase esté decorada como un ObjectType de GraphQL
-@Entity()
+@ObjectType() 
 export class Torneo {
   @PrimaryGeneratedColumn()
   @Field(type => Int)

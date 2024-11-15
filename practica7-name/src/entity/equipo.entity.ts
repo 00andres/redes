@@ -1,7 +1,7 @@
 import { ObjectType, Field, Int } from '@nestjs/graphql';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@ObjectType() // Este decorador marca la clase como un tipo de salida en GraphQL
+@ObjectType() 
 @Entity()
 export class Equipo {
   @PrimaryGeneratedColumn()

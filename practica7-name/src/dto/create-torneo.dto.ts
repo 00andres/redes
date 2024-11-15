@@ -1,7 +1,7 @@
 import { InputType, Field, Int } from '@nestjs/graphql';
 import { IsString, IsDate } from 'class-validator';
 
-@InputType() // Decorador para los tipos de entrada
+@InputType() 
 export class CreateTorneoDto {
   @IsString()
   @Field()

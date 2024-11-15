@@ -23,7 +23,7 @@ export class UserService {
   }
 
   // Actualizar un usuario existente
-  async update(id: string, updateUserDto: CreateUserDto): Promise<User> { // Cambié el tipo de 'id' a 'string'
+  async update(id: string, updateUserDto: CreateUserDto): Promise<User> { 
     await this.userRepository.update(id, updateUserDto);
     
     const updatedUser = await this.userRepository.findOne({ where: { id } });
@@ -35,7 +35,7 @@ export class UserService {
   }
 
   // Eliminar un usuario por su ID
-  async delete(id: string): Promise<void> { // Cambié el tipo de 'id' a 'string'
+  async delete(id: string): Promise<void> {
     const result = await this.userRepository.delete(id);
     if (result.affected === 0) {
       throw new NotFoundException(`Usuario con ID ${id} no encontrado`);

@@ -3,7 +3,7 @@ import { EquipoService } from '../services/equipo.service';
 import { CreateEquipoDto } from '../dto/create-equipo.dto';
 import { Equipo } from 'src/entity/equipo.entity';
 
-@Resolver(() => Equipo) // Asegúrate de que el resolver esté configurado para el tipo Equipo
+@Resolver(() => Equipo) 
 export class EquipoResolver {
   constructor(private equipoService: EquipoService) {}
 

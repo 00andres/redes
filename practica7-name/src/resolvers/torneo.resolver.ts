@@ -3,7 +3,7 @@ import { TorneoService } from '../services/torneo.service';
 import { CreateTorneoDto } from '../dto/create-torneo.dto';
 import { Torneo } from 'src/entity/torneo.entity';
 
-@Resolver(() => Torneo) // Asegúrate de que el resolver está configurado para el tipo Torneo
+@Resolver(() => Torneo) /
 export class TorneoResolver {
   constructor(private torneoService: TorneoService) {}
 
